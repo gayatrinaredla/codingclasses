@@ -1,0 +1,53 @@
+class queue
+{
+int f=-1,r=-1;
+int max=5;
+int a[]=new int[max];
+void insertion(int x)
+{
+if(r==max-1)
+{
+System.out.println("queue is full");
+}
+else
+{
+r++;
+a[r]=x;
+if(f==-1)
+f=0;
+}
+}
+void deletion()
+{
+if(f==-1)
+{
+System.out.println("queue is empty");
+}
+else
+{
+System.out.println("Deleted element:"+a[f]);
+f++;
+}
+}
+void display()
+{
+for(int i=f;i<=r;i++)
+{
+System.out.println(" "+a[i]);
+}
+}
+}
+class squeue
+{
+public static void main(String args[])
+{
+queue q=new queue();
+q.insertion(10);
+q.insertion(20);
+q.insertion(30);
+q.insertion(40);
+q.insertion(50);
+q.deletion();
+q.display();
+}
+}
