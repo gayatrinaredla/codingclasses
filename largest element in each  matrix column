@@ -1,0 +1,36 @@
+import java.util.*;
+class t8
+{
+static void set(int a[][],int m,int n)
+{
+int i,j;
+for(i=0;i<n;i++)
+{
+int max=a[0][i];
+for(j=1;j<m;j++)
+{
+if(a[j][i]>max)
+{
+max=a[j][i];
+}
+}
+System.out.println("Largest element in "+(i+1)+"column:"+max);
+}
+}
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int m,n,i,j;
+System.out.println("Enter no. of rows and columns of the matrix:");
+m=sc.nextInt();
+n=sc.nextInt();
+int b[][]=new int[m][n];
+System.out.println("Enter the elements of the matrix:");
+for(i=0;i<m;i++)
+{
+for(j=0;j<n;j++)
+{
+b[i][j]=sc.nextInt();
+}}
+set(b,m,n);
+}}
